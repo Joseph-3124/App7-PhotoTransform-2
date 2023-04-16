@@ -105,7 +105,11 @@
           
           
 var imageData = context.getImageData(0, 0, 600, 500); //this line is to inform where to gather the image data
-         				var data = imageData.data; //makes the image data variable for later uses in the code
+         var data = imageData.data; //makes the image data variable for later uses in the code
+         for (var i = 0; i < data.length; i += 4) { //
+              var r = data[i]; //red pixel data variable
+              var g = data[i + 1]; //green pixel data variable
+              var b = data[i + 2]; //blue pixel data variable
 
           
           
