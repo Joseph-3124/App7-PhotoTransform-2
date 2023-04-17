@@ -105,14 +105,14 @@
           
           
 var imageData = context.getImageData(0, 0, 600, 500); //this line is to inform where to gather the image data
-         var data = imageData.data; //makes the image data variable for later uses in the code
-         for (var i = 0; i < data.length; i += 4) { //
-              var r = data[i]; //red pixel data variable
-              var g = data[i + 1]; //green pixel data variable
-              var b = data[i + 2]; //blue pixel data variable
-          data[i] = 0; // = 0 puts red pixels at 0, causing them not to appear
-          data[i + 1] = 0; // same are code above but for green
-          data[i + 2] = b; //  only blue show
+				var data = imageData.data; //makes the image data variable for later uses in the code
+    				for (var i = 0; i < data.length; i += 4) { //
+              				var r = data[i]; //red pixel data variable
+            				var g = data[i + 1]; //green pixel data variable
+            				var b = data[i + 2]; //blue pixel data variable
+					data[i] = 0; // = 0 puts red pixels at 0, causing them not to appear
+					data[i + 1] = 0; // same are code above but for green
+					data[i + 2] = b; //  only blue show
 				}
 
 				// alters image on canvas2 using the data coded above
@@ -151,16 +151,16 @@ var imageData = context.getImageData(0, 0, 600, 500); //this line is to inform w
       
       <canvas id="myCanvas" width=600 height=500 style="border:1px solid #d3d3d3;"></canvas>
       <script> /* This script initiates the cavas and puts the text on the canvas "myCanvas" */
-        var canvas = document.getElementById('myCanvas');
-        var context = canvas.getContext("2d");
-        context.font = '20pt Calibri';
-        context.fillStyle = "black";
-        context.fillText("Original image will go here", 10, 20);
+      var canvas = document.getElementById('myCanvas');
+      var context = canvas.getContext("2d");
+      context.font = '20pt Calibri';
+      context.fillStyle = "black";
+      context.fillText("Original image will go here", 10, 20);
       </script>
 	    
-	     <canvas id="dataCanvas" width=600 height=500 style="border:1px solid #d3d3d3;"></canvas>
-      <script> /* This script initiates the cavas and puts the text on the canvas "myCanvas" */
-        var canvas2 = document.getElementById('myCanvas');
+	<canvas id="dataCanvas" width=600 height=500 style="border:1px solid #d3d3d3;"></canvas>
+	<script> /* This script initiates the cavas and puts the text on the canvas "myCanvas" */
+        var canvas2 = document.getElementById('dataCanvas');
         var context2 = canvas2.getContext("2d");
         context2.font = '20pt Calibri';
         context2.fillStyle = "black";
