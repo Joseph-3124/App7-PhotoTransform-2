@@ -110,6 +110,13 @@ var imageData = context.getImageData(0, 0, 600, 500); //this line is to inform w
               var r = data[i]; //red pixel data variable
               var g = data[i + 1]; //green pixel data variable
               var b = data[i + 2]; //blue pixel data variable
+          data[i] = 0; // = 0 puts red pixels at 0, causing them not to appear
+          data[i + 1] = 0; // same are code above but for green
+          data[i + 2] = b; //  only blue show
+				}
+
+				// changes image on canvas2 to established data above
+				context2.putImageData(imageData, 0, 0);
 
           
           
